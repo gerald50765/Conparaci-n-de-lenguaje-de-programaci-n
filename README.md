@@ -1,56 +1,161 @@
-# Conparaci-n-de-lenguaje-de-programaci-n
-Comparación de software de programación
-# Comparativa de lenguaje de programacion: Python, JavaScript y C#
+# Integridad de Datos en Bases de Datos Relacionales
 
-## 📝 Resumen.
-*(El propósito de este análisis fue explorar la evolución, popularidad y utilidad de los lenguajes de programación más utilizados en el desarrollo de software durante la última década. Para ello, se recopilaron datos de diversas fuentes, incluyendo informes tecnológicos, encuestas a desarrolladores y artículos académicos especializados. El procedimiento consistió en clasificar los lenguajes según su uso principal (desarrollo web, aplicaciones móviles, inteligencia artificial, entre otros) y analizar su crecimiento en comunidades de usuarios, documentación disponible y demanda laboral. También se revisaron las características técnicas de cada lenguaje, como su sintaxis, facilidad de aprendizaje, rendimiento y compatibilidad con diferentes plataformas. Los hallazgos principales revelaron que lenguajes como Python y JavaScript destacaron por su versatilidad y facilidad de uso, siendo ampliamente adoptados tanto por principiantes como por profesionales. Por otro lado, lenguajes como C++ y Java continuaron siendo fundamentales en el desarrollo de software de alto rendimiento y aplicaciones empresariales. Se concluyó que la elección del lenguaje depende en gran medida del contexto de uso y del perfil del programador, pero que la tendencia general se inclinó hacia aquellos lenguajes que ofrecen mayor accesibilidad, soporte comunitario y adaptabilidad tecnológica. Este análisis permitió comprender mejor el papel que desempeñan los lenguajes de programación en la innovación digital y su impacto en el futuro del desarrollo tecnológico.)*
+## Introducción
 
-## 🔑 Palabras clave.
-*(Lenguajes, Popularidad, Programación, Tecnología, Uso
- )*
+En la actualidad, las organizaciones dependen de grandes volúmenes de información para realizar sus actividades diarias. Empresas, hospitales, universidades y bancos almacenan datos en bases de datos relacionales para garantizar una gestión eficiente de la información. Sin embargo, para que estos datos sean útiles, deben mantenerse correctos, completos y consistentes. Para ello existen las reglas de integridad, las cuales permiten controlar la calidad y confiabilidad de la información almacenada.
 
----
+## Concepto de Integridad de Datos
 
-## 🎯 Introducción.
-*(Este análisis surgió ante la creciente relevancia que los lenguajes de programación adquirieron en diversos campos del conocimiento y la industria tecnológica. En los últimos años, la transformación digital y la automatización de procesos impulsaron la necesidad de formar profesionales con competencias en programación, lo que generó un mayor interés por identificar cuáles lenguajes ofrecían mayores ventajas según el área de aplicación. El problema planteado consistió en la falta de información clara y comparativa sobre la utilidad, facilidad de aprendizaje y demanda laboral de los principales lenguajes de programación. Esto dificultaba la toma de decisiones por parte de estudiantes, instituciones educativas y desarrolladores en formación. Por ello, el objetivo del trabajo fue analizar los lenguajes más utilizados en la actualidad para evaluar sus características, niveles de adopción y proyección futura. El enfoque del estudio fue de tipo descriptivo, con un carácter documental y comparativo, ya que se basó en fuentes actualizadas y opiniones de expertos para establecer criterios objetivos de evaluación. Este enfoque permitió comprender no solo qué lenguajes dominaban el mercado, sino también por qué eran preferidos en determinados entornos de desarrollo, ofreciendo así una visión más completa del panorama tecnológico actual..)*
+La integridad de datos es la propiedad que garantiza que la información almacenada en una base de datos permanezca exacta, consistente y válida durante todas las operaciones realizadas sobre ella. Su principal objetivo es evitar errores, inconsistencias y pérdidas de información que puedan afectar el funcionamiento de un sistema.
+
+La integridad es uno de los pilares fundamentales del modelo relacional, ya que permite que los datos mantengan relaciones correctas y reflejen la realidad que representan.
 
 ---
 
-## 🔍 Desarrollo del análisis Contenido.
+## Principales Tipos de Integridad
 
-### PYTHON
-- Características generales:Lenguaje interpretado, de alto nivel y multiparadigma. Es conocido por su sintaxis clara y legible.
-- Fortalezas:Fácil de aprender, gran comunidad, excelente para ciencia de datos, IA y automatización.
-- Debilidades:Menor rendimiento en comparación con lenguajes compilados; no es ideal para aplicaciones móviles.
+### Integridad de Entidad
 
-### C#
-- Características generales:Lenguaje compilado, orientado a objetos, desarrollado por Microsoft. Funciona principalmente en entornos Windows y .NET.
+Este tipo de integridad asegura que cada fila o registro dentro de una tabla pueda identificarse de forma única.
 
+Se logra mediante el uso de una clave primaria (Primary Key), la cual no admite valores nulos ni duplicados.
 
-- Fortalezas: Alto rendimiento, ideal para aplicaciones de escritorio, videojuegos (con Unity) y entornos empresariales.
-- Debilidades: Menos multiplataforma fuera del ecosistema Microsoft; curva de aprendizaje media.
+#### Ejemplo
 
-### javaScript
-- Características generales:Lenguaje interpretado, basado en objetos y eventos, usado principalmente para desarrollo web del lado del cliente.
-- Fortalezas: Esencial para desarrollo web, compatible con todos los navegadores, gran comunidad y muchos frameworks modernos.
-- Debilidades: Su flexibilidad puede llevar a errores difíciles de depurar; menos seguro si no se implementa correctamente.
+En una tabla de empleados, el número de identificación de cada trabajador debe ser único para evitar confusiones o duplicaciones.
 
----
+#### Ventajas
 
-## 📊 Cuadro comparativo (lenguajes Programacion).
-
-| Plataforma | Rendimiento | Paradigma | Personalización | Comunidad |
-|------------|-----------  |-----------|-----------------|---------  |
-| C#         |   Alto      |  objetos  |Alta en .NET     | Fuerte    |
-| PYTHON     |   Medio     |alto nivel |Alta en scripts  |Muy amplia |
-| JavaScript |Medio a alto |Basado     | Muy alta        | Muy activa|
+- Identificación única de registros.
+- Evita duplicidad de información.
+- Facilita la administración de los datos.
 
 ---
 
-## 🧠 Conclusión.
-*(El análisis permitió identificar que cada lenguaje de programación tiene características únicas que lo hacen más adecuado para ciertos contextos. Python destacó por su simplicidad y versatilidad, siendo ideal para principiantes y proyectos de ciencia de datos. C# mostró un alto rendimiento y robustez en entornos empresariales y desarrollo de videojuegos. Por su parte, JavaScript se consolidó como la opción principal para el desarrollo web, gracias a su compatibilidad con navegadores y su amplia comunidad. En definitiva, la elección del lenguaje dependerá de los objetivos del proyecto, el entorno de desarrollo y la experiencia del programador.)*
+### Integridad Referencial
+
+Garantiza que las relaciones entre las tablas sean coherentes.
+
+Cuando una tabla utiliza una clave foránea (Foreign Key), esta debe corresponder a un registro existente en la tabla principal.
+
+#### Ejemplo
+
+Si una tabla de ventas contiene el código de un cliente, dicho cliente debe existir previamente en la tabla de clientes.
+
+#### Ventajas
+
+- Mantiene la consistencia de las relaciones.
+- Evita registros huérfanos.
+- Mejora la organización de la información.
 
 ---
 
-## 📚 Referencias.
-*(W3Schools.com. (s. f.). https://www.w3schools.com/,BillWagner. (s. f.). C# Guide - .NET managed language. Microsoft Learn. https://learn.microsoft.com/en-us/dotnet/csharp.)*
+### Integridad de Dominio
+
+Controla los valores permitidos en cada columna de una tabla.
+
+Las restricciones pueden incluir:
+
+- Tipo de dato.
+- Tamaño máximo.
+- Rangos permitidos.
+- Formatos específicos.
+
+#### Ejemplo
+
+Una columna que almacena edades puede aceptar únicamente números positivos entre 0 y 120.
+
+#### Ventajas
+
+- Reduce errores de captura.
+- Mejora la calidad de los datos.
+- Garantiza formatos adecuados.
+
+---
+
+### Integridad de Negocio o Definida por el Usuario
+
+Corresponde a reglas específicas establecidas según las necesidades de una organización.
+
+#### Ejemplo
+
+En una universidad:
+
+- Un estudiante debe aprobar los prerrequisitos antes de matricular una asignatura.
+
+En un banco:
+
+- Una transferencia no puede exceder el saldo disponible.
+
+#### Ventajas
+
+- Permite personalizar el sistema.
+- Garantiza el cumplimiento de políticas internas.
+
+---
+
+## Importancia de la Integridad de Datos
+
+La integridad de datos es esencial porque:
+
+- Incrementa la confiabilidad de la información.
+- Reduce errores operativos.
+- Facilita la generación de reportes.
+- Mejora la toma de decisiones.
+- Protege la calidad de los datos a largo plazo.
+
+Sin integridad, una base de datos podría contener información contradictoria o incorrecta, afectando directamente a usuarios y organizaciones.
+
+---
+
+## Aplicaciones en la Vida Real
+
+### Sector Bancario
+
+Los bancos utilizan reglas de integridad para evitar transacciones inválidas y garantizar que los saldos de las cuentas sean correctos.
+
+### Sector Educativo
+
+Las universidades controlan matrículas, notas y datos estudiantiles mediante restricciones que aseguran la consistencia de la información.
+
+### Sector Salud
+
+Los hospitales emplean integridad de datos para mantener historiales médicos precisos y evitar errores en tratamientos o diagnósticos.
+
+### Comercio Electrónico
+
+Las tiendas en línea verifican productos, clientes y pedidos mediante relaciones consistentes entre tablas.
+
+---
+
+## Desafíos para Mantener la Integridad
+
+Algunos factores que pueden afectar la integridad de los datos son:
+
+- Errores humanos.
+- Fallos de software.
+- Ataques informáticos.
+- Actualizaciones incorrectas.
+- Diseño deficiente de la base de datos.
+
+Por ello, es necesario implementar mecanismos de control y validación desde el diseño inicial del sistema.
+
+---
+
+## Conclusión
+
+La integridad de datos constituye un elemento indispensable en las bases de datos relacionales. Gracias a las reglas de integridad de entidad, referencial, de dominio y de negocio, es posible garantizar información precisa, consistente y confiable. Su correcta implementación permite que las organizaciones administren sus recursos de información de manera eficiente, reduciendo errores y mejorando la calidad de los procesos que dependen de los datos almacenados.
+
+---
+
+## Referencias
+
+- Connolly, T., & Begg, C. (2015). *Database Systems: A Practical Approach to Design, Implementation, and Management* (6th ed.). Pearson.
+
+- Coronel, C., & Morris, S. (2019). *Database Systems: Design, Implementation, & Management* (13th ed.). Cengage Learning.
+
+- Date, C. J. (2019). *An Introduction to Database Systems* (8th ed.). Pearson Education.
+
+- Elmasri, R., & Navathe, S. B. (2016). *Fundamentals of Database Systems* (7th ed.). Pearson.
+
+- Silberschatz, A., Korth, H. F., & Sudarshan, S. (2019). *Database System Concepts* (7th ed.). McGraw-Hill Education.
